@@ -17,7 +17,7 @@ A core principle of the schema.org vocabulary is to indicate an entity type. As 
 
 ```go
 type Person struct {
-  FamilyName schemaorg.FamilyName `json:"schema:familyName"`
+  schemaorg.FamilyName `json:"schema:familyName"`
 }
 ```
 
@@ -39,7 +39,7 @@ The statement
   Person schema:familyName "Doe"
 */
 type Person struct {
-  FamilyName schemaorg.FamilyName `json:"schema:familyName"`
+  schemaorg.FamilyName `json:"schema:familyName"`
 }
 ```
 
@@ -64,10 +64,10 @@ So that, the application "assembles" core domain type as a product of the types 
 import "github.com/fogfish/schemaorg"
 
 type Person struct {
-  ID         schemaorg.Identifier `json:"schema:@id"`
-  GivenName  schemaorg.GivenName  `json:"schema:givenName"`
-  FamilyName schemaorg.FamilyName `json:"schema:familyName"`
-  Email      schemaorg.Email      `json:"schema:email"`
+  schemaorg.Identifier `json:"schema:@id"`
+  schemaorg.GivenName  `json:"schema:givenName"`
+  schemaorg.FamilyName `json:"schema:familyName"`
+  schemaorg.Email      `json:"schema:email"`
 }
 ```
 
