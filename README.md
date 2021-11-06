@@ -1,14 +1,14 @@
 # schema.org for golang
 
-The library declares Golang types from https://schema.org ontology.
+The library declares Go types of https://schema.org ontology.
 
 ## Inspiration
 
 > Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
 
-The common vocabulary layouts content into data structure interpretable by human and machines that guarantees an interoperability baseline for software in the distribute systems, in the absence of strong content negotiation techniques. Despite, the scheme.org elevates creation of web structured data markup schema, it also defines an ontology usable for data design in other context. A core principle of the schema.org vocabulary is to indicate an entity type.
+The common vocabulary layouts content into data structure interpretable by human and machines. It also guarantees an interoperability baseline for software in the distribute systems, in the absence of strong content negotiation techniques. Despite, the scheme.org elevates creation of web structured data markup schema, it also defines an ontology usable for data design in other context such as public RESTful interfaces, gRPC or GraphQL.
 
-As an example, the vocabulary defines a rich collection of `rdf:Property`, which are atomic building blocks.
+A core principle of the schema.org vocabulary is to indicate an entity type. As an example, the vocabulary defines a rich collection of `rdf:Property`, which are essential building blocks for product types.
 
 ```go
 type Person struct {
@@ -22,9 +22,9 @@ type Person struct {
 The latest version of the library is available at its `main` branch. All development, including new features and bug fixes, take place on the `main` branch using forking and pull requests as described in contribution guidelines. The stable version is available via Golang modules.
 
 
-## Product types with schema.org
+## Core domain types (product types)
 
-Ontology uses `rdf:Property` to depict characteristic of entities, which differs significantly from Golang type system. Instead of defining product type in terms of named properties, schema.org describes properties in terms of types to which they apply. Schema.org allows to extends concepts, defining additional properties without the need to re-define the original description of types. 
+Ontologies use `rdf:Property` to depict characteristic of entities, which differs significantly from Golang type system. Instead of defining product type in terms of named properties, ontologies describe properties in terms of types to which they apply, which allows to extends concepts, defining additional properties without the need to re-define the original description of types. 
 
 `rdf:Property` is a relation between subject resources and object resources. The concept of property at Go programming languages does not correspond to the `rdf:Property`, with an exception that "properties" of structs has names and corresponding types.
 
@@ -38,7 +38,7 @@ type Person struct {
 }
 ```
 
-Type-level meta-programming helps us better reflect the `rdf:Property` concept but type-level programming is not supported at Golang. Therefore, the library reflects the `rdf:Property` to the type.
+Type-level meta-programming helps us better reflect the `rdf:Property` concept but type-level programming is not supported at Golang. Therefore, this library reflects the `rdf:Property` to the type.
 
 ```go
 /*
