@@ -2,6 +2,11 @@
 
 The library declares Go types of https://schema.org ontology.
 
+[![Version](https://img.shields.io/github/v/tag/fogfish/schemaorg?label=version)](https://github.com/fogfish/schemaorg/releases)
+[![Documentation](https://pkg.go.dev/badge/github.com/fogfish/schemaorg)](https://pkg.go.dev/github.com/fogfish/schemaorg)
+[![Git Hub](https://img.shields.io/github/last-commit/fogfish/schemaorg.svg)](https://github.com/fogfish/schemaorg)
+
+
 ## Inspiration
 
 > Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
