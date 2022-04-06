@@ -27,8 +27,7 @@ type Person struct {
 The latest version of the library is available at its `main` branch. All development, including new features and bug fixes, take place on the `main` branch using forking and pull requests as described in contribution guidelines. The stable version is available via Golang modules.
 
 The library uses semver schema, the **minor version** identifies the https://schema.org release used to generate types. For example, the version v1.14.0 of the library is built from release 14.0. The **patch version** is just a sequential number, increased every time this library is fixed or updated, it do not have any correlation with https://schema.org release.  
-  
-**The minor version number** 
+
 
 ## Core domain types (product types)
 
