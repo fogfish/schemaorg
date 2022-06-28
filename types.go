@@ -43,11 +43,43 @@ type EmployerOverview string
 
 /*
 
+AnnualPercentageRate is https://schema.org/annualPercentageRate
+
+The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.
+*/
+type AnnualPercentageRate float64
+
+/*
+
+IsAcceptingNewPatients is https://schema.org/isAcceptingNewPatients
+
+Whether the provider is accepting new patients.
+*/
+type IsAcceptingNewPatients bool
+
+/*
+
 CountriesSupported is https://schema.org/countriesSupported
 
 Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
 */
 type CountriesSupported string
+
+/*
+
+CvdNumBedsOcc is https://schema.org/cvdNumBedsOcc
+
+numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
+*/
+type CvdNumBedsOcc float64
+
+/*
+
+LastReviewed is https://schema.org/lastReviewed
+
+Date on which the content on this web page was last reviewed for accuracy and/or completeness.
+*/
+type LastReviewed string
 
 /*
 
@@ -91,11 +123,51 @@ type HealthPlanNetworkId string
 
 /*
 
+ProductReturnDays is https://schema.org/productReturnDays
+
+The productReturnDays property indicates the number of days (from purchase) within which relevant product return policy is applicable.
+*/
+type ProductReturnDays float64
+
+/*
+
+HealthPlanCoinsuranceRate is https://schema.org/healthPlanCoinsuranceRate
+
+Whether The rate of coinsurance expressed as a number between 0.0 and 1.0.
+*/
+type HealthPlanCoinsuranceRate float64
+
+/*
+
+Percentile75 is https://schema.org/percentile75
+
+The 75th percentile value.
+*/
+type Percentile75 float64
+
+/*
+
 Teaches is https://schema.org/teaches
 
 The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
 */
 type Teaches string
+
+/*
+
+ModifiedTime is https://schema.org/modifiedTime
+
+The date and time the reservation was modified.
+*/
+type ModifiedTime string
+
+/*
+
+ScheduledTime is https://schema.org/scheduledTime
+
+The time the object is scheduled to.
+*/
+type ScheduledTime string
 
 /*
 
@@ -107,11 +179,27 @@ type ProgramPrerequisites string
 
 /*
 
+CoverageEndTime is https://schema.org/coverageEndTime
+
+The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
+*/
+type CoverageEndTime string
+
+/*
+
 AdditionalName is https://schema.org/additionalName
 
 An additional name for a Person, can be used for a middle name.
 */
 type AdditionalName string
+
+/*
+
+MinPrice is https://schema.org/minPrice
+
+The lowest price if the price is a range.
+*/
+type MinPrice float64
 
 /*
 
@@ -128,6 +216,14 @@ Assembly is https://schema.org/assembly
 Library file name e.g., mscorlib.dll, system.web.dll.
 */
 type Assembly string
+
+/*
+
+CvdNumICUBedsOcc is https://schema.org/cvdNumICUBedsOcc
+
+numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
+*/
+type CvdNumICUBedsOcc float64
 
 /*
 
@@ -176,6 +272,22 @@ BeneficiaryBank is https://schema.org/beneficiaryBank
 A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary.
 */
 type BeneficiaryBank string
+
+/*
+
+EstimatedSalary is https://schema.org/estimatedSalary
+
+An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.
+*/
+type EstimatedSalary float64
+
+/*
+
+CvdNumVent is https://schema.org/cvdNumVent
+
+numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
+*/
+type CvdNumVent float64
 
 /*
 
@@ -259,6 +371,14 @@ type LodgingUnitType string
 
 /*
 
+Expires is https://schema.org/expires
+
+Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, or a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.
+*/
+type Expires string
+
+/*
+
 Gtin12 is https://schema.org/gtin12
 
 The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
@@ -326,6 +446,30 @@ type MathExpression string
 
 /*
 
+RequiredMinAge is https://schema.org/requiredMinAge
+
+Audiences defined by a person's minimum age.
+*/
+type RequiredMinAge float64
+
+/*
+
+CashBack is https://schema.org/cashBack
+
+A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
+*/
+type CashBack float64
+
+/*
+
+ContentReferenceTime is https://schema.org/contentReferenceTime
+
+The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.
+*/
+type ContentReferenceTime string
+
+/*
+
 Preparation is https://schema.org/preparation
 
 Typical preparation that a patient must undergo before having the procedure performed.
@@ -339,6 +483,14 @@ IswcCode is https://schema.org/iswcCode
 The International Standard Musical Work Code for the composition.
 */
 type IswcCode string
+
+/*
+
+OwnedFrom is https://schema.org/ownedFrom
+
+The date and time of obtaining the product.
+*/
+type OwnedFrom string
 
 /*
 
@@ -374,6 +526,14 @@ type LegalStatus string
 
 /*
 
+SuggestedMaxAge is https://schema.org/suggestedMaxAge
+
+Maximum recommended age in years for the audience or user.
+*/
+type SuggestedMaxAge float64
+
+/*
+
 Telephone is https://schema.org/telephone
 
 The telephone number.
@@ -406,6 +566,14 @@ type JobLocationType string
 
 /*
 
+MembershipPointsEarned is https://schema.org/membershipPointsEarned
+
+The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (e.g. stars, miles, etc.)
+*/
+type MembershipPointsEarned float64
+
+/*
+
 TrainName is https://schema.org/trainName
 
 The name of the train (e.g. The Orient Express).
@@ -427,6 +595,14 @@ Responsibilities is https://schema.org/responsibilities
 Responsibilities associated with this role or Occupation.
 */
 type Responsibilities string
+
+/*
+
+StartOffset is https://schema.org/startOffset
+
+The start time of the clip expressed as the number of seconds from the beginning of the work.
+*/
+type StartOffset float64
 
 /*
 
@@ -459,6 +635,22 @@ TouristType is https://schema.org/touristType
 Attraction suitable for type(s) of tourist. eg. Children, visitors from a particular country, etc. 
 */
 type TouristType string
+
+/*
+
+ValueMaxLength is https://schema.org/valueMaxLength
+
+Specifies the allowed range for number of characters in a literal value.
+*/
+type ValueMaxLength float64
+
+/*
+
+RepresentativeOfPage is https://schema.org/representativeOfPage
+
+Indicates whether this image is representative of the content of the page.
+*/
+type RepresentativeOfPage bool
 
 /*
 
@@ -502,6 +694,14 @@ type MechanismOfAction string
 
 /*
 
+NumTracks is https://schema.org/numTracks
+
+The number of tracks in this album or playlist.
+*/
+type NumTracks float64
+
+/*
+
 Text is https://schema.org/text
 
 The textual content of this CreativeWork.
@@ -523,6 +723,14 @@ ReturnPolicyCountry is https://schema.org/returnPolicyCountry
 The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent too.
 */
 type ReturnPolicyCountry string
+
+/*
+
+StartDate is https://schema.org/startDate
+
+The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+*/
+type StartDate string
 
 /*
 
@@ -591,11 +799,67 @@ type SchemaVersion string
 
 /*
 
+EndOffset is https://schema.org/endOffset
+
+The end time of the clip expressed as the number of seconds from the beginning of the work.
+*/
+type EndOffset float64
+
+/*
+
+OffersPrescriptionByMail is https://schema.org/offersPrescriptionByMail
+
+Whether prescriptions can be delivered by mail.
+*/
+type OffersPrescriptionByMail bool
+
+/*
+
+TotalPrice is https://schema.org/totalPrice
+
+The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+*/
+type TotalPrice float64
+
+/*
+
 MerchantReturnLink is https://schema.org/merchantReturnLink
 
 Specifies a Web page or service by URL, for product returns.
 */
 type MerchantReturnLink string
+
+/*
+
+DoesNotShip is https://schema.org/doesNotShip
+
+Indicates when shipping to a particular [[shippingDestination]] is not available.
+*/
+type DoesNotShip bool
+
+/*
+
+Closes is https://schema.org/closes
+
+The closing hour of the place or service on the given day(s) of the week.
+*/
+type Closes string
+
+/*
+
+EpisodeNumber is https://schema.org/episodeNumber
+
+Position of the episode within an ordered group of episodes.
+*/
+type EpisodeNumber float64
+
+/*
+
+NumberOfItems is https://schema.org/numberOfItems
+
+The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.
+*/
+type NumberOfItems float64
 
 /*
 
@@ -631,6 +895,14 @@ type CodeValue string
 
 /*
 
+RestockingFee is https://schema.org/restockingFee
+
+Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
+*/
+type RestockingFee float64
+
+/*
+
 CostPerUnit is https://schema.org/costPerUnit
 
 The cost per unit of the drug.
@@ -647,6 +919,22 @@ type Pattern string
 
 /*
 
+CvdNumC19Died is https://schema.org/cvdNumC19Died
+
+numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
+*/
+type CvdNumC19Died float64
+
+/*
+
+NumberOfLoanPayments is https://schema.org/numberOfLoanPayments
+
+The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of months from the contractual first payment date to the maturity date.
+*/
+type NumberOfLoanPayments float64
+
+/*
+
 MusicCompositionForm is https://schema.org/musicCompositionForm
 
 The type of composition (e.g. overture, sonata, symphony, etc.).
@@ -655,11 +943,35 @@ type MusicCompositionForm string
 
 /*
 
+ArrivalTime is https://schema.org/arrivalTime
+
+The expected arrival time.
+*/
+type ArrivalTime string
+
+/*
+
+MaximumAttendeeCapacity is https://schema.org/maximumAttendeeCapacity
+
+The total number of individuals that may attend an event or venue.
+*/
+type MaximumAttendeeCapacity float64
+
+/*
+
 HealthPlanCoinsuranceOption is https://schema.org/healthPlanCoinsuranceOption
 
 Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
 */
 type HealthPlanCoinsuranceOption string
+
+/*
+
+GeoRadius is https://schema.org/geoRadius
+
+Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
+*/
+type GeoRadius float64
 
 /*
 
@@ -705,6 +1017,14 @@ type ClinicalPharmacology string
 
 /*
 
+PriceValidUntil is https://schema.org/priceValidUntil
+
+The date after which the price is no longer available.
+*/
+type PriceValidUntil string
+
+/*
+
 PossibleComplication is https://schema.org/possibleComplication
 
 A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.
@@ -729,6 +1049,14 @@ type Line string
 
 /*
 
+WebCheckinTime is https://schema.org/webCheckinTime
+
+The time when a passenger can check into the flight online.
+*/
+type WebCheckinTime string
+
+/*
+
 OriginalMediaLink is https://schema.org/originalMediaLink
 
 Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]] content, e.g. video file.
@@ -745,11 +1073,30 @@ type TissueSample string
 
 /*
 
+ExceptDate is https://schema.org/exceptDate
+
+Defines a [[Date]] or [[DateTime]] during which a scheduled [[Event]] will not take place. The property allows exceptions to
+      a [[Schedule]] to be specified. If an exception is specified as a [[DateTime]] then only the event that would have started at that specific date and time
+      should be excluded from the schedule. If an exception is specified as a [[Date]] then any event that is scheduled for that 24 hour period should be
+      excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event.
+*/
+type ExceptDate string
+
+/*
+
 ExpertConsiderations is https://schema.org/expertConsiderations
 
 Medical expert advice related to the plan.
 */
 type ExpertConsiderations string
+
+/*
+
+ScheduledPaymentDate is https://schema.org/scheduledPaymentDate
+
+The date the invoice is scheduled to be paid.
+*/
+type ScheduledPaymentDate string
 
 /*
 
@@ -769,11 +1116,27 @@ type HighPrice string
 
 /*
 
+MaximumVirtualAttendeeCapacity is https://schema.org/maximumVirtualAttendeeCapacity
+
+The maximum physical attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects, in the case of a [[MixedEventAttendanceMode]]). 
+*/
+type MaximumVirtualAttendeeCapacity float64
+
+/*
+
 Rxcui is https://schema.org/rxcui
 
 The RxCUI drug identifier from RXNORM.
 */
 type Rxcui string
+
+/*
+
+NumberOfBathroomsTotal is https://schema.org/numberOfBathroomsTotal
+
+The total integer number of bathrooms in a some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See also [[numberOfRooms]].
+*/
+type NumberOfBathroomsTotal float64
 
 /*
 
@@ -825,6 +1188,22 @@ type StorageRequirements string
 
 /*
 
+SmokingAllowed is https://schema.org/smokingAllowed
+
+Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+*/
+type SmokingAllowed bool
+
+/*
+
+Repetitions is https://schema.org/repetitions
+
+Number of times one should repeat the activity.
+*/
+type Repetitions float64
+
+/*
+
 PriceType is https://schema.org/priceType
 
 Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
@@ -833,11 +1212,27 @@ type PriceType string
 
 /*
 
+DirectApply is https://schema.org/directApply
+
+Indicates whether an [[url]] that is associated with a [[JobPosting]] enables direct application for the job, via the posting website. A job posting is considered to have directApply of [[True]] if an application process for the specified job can be directly initiated via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the JobPosting url(s) supplied.
+*/
+type DirectApply bool
+
+/*
+
 AfterMedia is https://schema.org/afterMedia
 
 A media object representing the circumstances after performing this direction.
 */
 type AfterMedia string
+
+/*
+
+DissolutionDate is https://schema.org/dissolutionDate
+
+The date that this organization was dissolved.
+*/
+type DissolutionDate string
 
 /*
 
@@ -875,6 +1270,14 @@ StrengthUnit is https://schema.org/strengthUnit
 The units of an active ingredient's strength, e.g. mg.
 */
 type StrengthUnit string
+
+/*
+
+PartySize is https://schema.org/partySize
+
+Number of people the reservation should accommodate.
+*/
+type PartySize float64
 
 /*
 
@@ -934,6 +1337,22 @@ type Genre string
 
 /*
 
+ValidUntil is https://schema.org/validUntil
+
+The date when the item is no longer valid.
+*/
+type ValidUntil string
+
+/*
+
+RenegotiableLoan is https://schema.org/renegotiableLoan
+
+Whether the terms for payment of interest can be renegotiated during the life of the loan.
+*/
+type RenegotiableLoan bool
+
+/*
+
 TermCode is https://schema.org/termCode
 
 A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]]
@@ -958,6 +1377,14 @@ type EvidenceOrigin string
 
 /*
 
+NumConstraints is https://schema.org/numConstraints
+
+Indicates the number of constraints (not counting [[populationType]]) defined for a particular [[StatisticalPopulation]]. This helps applications understand if they have access to a sufficiently complete description of a [[StatisticalPopulation]].
+*/
+type NumConstraints float64
+
+/*
+
 Mpn is https://schema.org/mpn
 
 The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
@@ -974,6 +1401,14 @@ type Ingredients string
 
 /*
 
+ScreenCount is https://schema.org/screenCount
+
+The number of screens in the movie theater.
+*/
+type ScreenCount float64
+
+/*
+
 AlternateName is https://schema.org/alternateName
 
 An alias for the item.
@@ -987,6 +1422,14 @@ SecurityScreening is https://schema.org/securityScreening
 The type of security screening the passenger is subject to.
 */
 type SecurityScreening string
+
+/*
+
+Median is https://schema.org/median
+
+The median value.
+*/
+type Median float64
 
 /*
 
@@ -1030,6 +1473,14 @@ type AddressRegion string
 
 /*
 
+ReadonlyValue is https://schema.org/readonlyValue
+
+Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
+*/
+type ReadonlyValue bool
+
+/*
+
 Surface is https://schema.org/surface
 
 A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board, etc.
@@ -1054,6 +1505,14 @@ type Keywords string
 
 /*
 
+TermsPerYear is https://schema.org/termsPerYear
+
+The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.
+*/
+type TermsPerYear float64
+
+/*
+
 NaturalProgression is https://schema.org/naturalProgression
 
 The expected progression of the condition if it is not treated and allowed to progress naturally.
@@ -1067,6 +1526,14 @@ Query is https://schema.org/query
 A sub property of instrument. The query used on this action.
 */
 type Query string
+
+/*
+
+MaxValue is https://schema.org/maxValue
+
+The upper value of some characteristic or property.
+*/
+type MaxValue float64
 
 /*
 
@@ -1095,6 +1562,22 @@ type ValueName string
 
 /*
 
+EmissionsCO2 is https://schema.org/emissionsCO2
+
+The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km".
+*/
+type EmissionsCO2 float64
+
+/*
+
+PurchaseDate is https://schema.org/purchaseDate
+
+The date the item e.g. vehicle was purchased by the current owner.
+*/
+type PurchaseDate string
+
+/*
+
 TypeOfBed is https://schema.org/typeOfBed
 
 The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
@@ -1103,11 +1586,36 @@ type TypeOfBed string
 
 /*
 
+DateReceived is https://schema.org/dateReceived
+
+The date/time the message was received if a single recipient exists.
+*/
+type DateReceived string
+
+/*
+
 LegislationType is https://schema.org/legislationType
 
 The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc., depending on the country.
 */
 type LegislationType string
+
+/*
+
+NumberOfRooms is https://schema.org/numberOfRooms
+
+The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
+Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+*/
+type NumberOfRooms float64
+
+/*
+
+Position is https://schema.org/position
+
+The position of an item in a series or sequence of items.
+*/
+type Position float64
 
 /*
 
@@ -1124,6 +1632,22 @@ ServiceUrl is https://schema.org/serviceUrl
 The website to access the service.
 */
 type ServiceUrl string
+
+/*
+
+ChildMaxAge is https://schema.org/childMaxAge
+
+Maximal age of the child.
+*/
+type ChildMaxAge float64
+
+/*
+
+CvdNumTotBeds is https://schema.org/cvdNumTotBeds
+
+numtotbeds - ALL HOSPITAL BEDS: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients.
+*/
+type CvdNumTotBeds float64
 
 /*
 
@@ -1167,6 +1691,22 @@ type GettingTestedInfo string
 
 /*
 
+NumberOfForwardGears is https://schema.org/numberOfForwardGears
+
+The total number of forward gears available for the transmission system of the vehicle.\n\nTypical unit code(s): C62
+*/
+type NumberOfForwardGears float64
+
+/*
+
+IsResizable is https://schema.org/isResizable
+
+Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.
+*/
+type IsResizable bool
+
+/*
+
 EducationalFramework is https://schema.org/educationalFramework
 
 The framework to which the resource being described is aligned.
@@ -1191,6 +1731,14 @@ type NegativeNotes string
 
 /*
 
+ProductionDate is https://schema.org/productionDate
+
+The date of production of the item, e.g. vehicle.
+*/
+type ProductionDate string
+
+/*
+
 Gender is https://schema.org/gender
 
 Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
@@ -1207,6 +1755,14 @@ type CvdFacilityCounty string
 
 /*
 
+NumberedPosition is https://schema.org/numberedPosition
+
+A number associated with a role in an organization, for example, the number on an athlete's jersey.
+*/
+type NumberedPosition float64
+
+/*
+
 PrintColumn is https://schema.org/printColumn
 
 The number of the column in which the NewsArticle appears in the print edition.
@@ -1220,6 +1776,15 @@ MembershipNumber is https://schema.org/membershipNumber
 A unique identifier for the membership.
 */
 type MembershipNumber string
+
+/*
+
+ConstrainingProperty is https://schema.org/constrainingProperty
+
+Indicates a property used as a constraint to define a [[StatisticalPopulation]] with respect to the set of entities
+  corresponding to an indicated type (via [[populationType]]).
+*/
+type ConstrainingProperty float64
 
 /*
 
@@ -1247,6 +1812,14 @@ type InDefinedTermSet string
 
 /*
 
+ValueMinLength is https://schema.org/valueMinLength
+
+Specifies the minimum allowed range for number of characters in a literal value.
+*/
+type ValueMinLength float64
+
+/*
+
 MaterialExtent is https://schema.org/materialExtent
 
 The quantity of the materials being described or an expression of the physical space they occupy.
@@ -1255,11 +1828,35 @@ type MaterialExtent string
 
 /*
 
+StartTime is https://schema.org/startTime
+
+The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+*/
+type StartTime string
+
+/*
+
 Polygon is https://schema.org/polygon
 
 A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.
 */
 type Polygon string
+
+/*
+
+InStoreReturnsOffered is https://schema.org/inStoreReturnsOffered
+
+Are in-store returns offered? (for more advanced return methods use the [[returnMethod]] property)
+*/
+type InStoreReturnsOffered bool
+
+/*
+
+NumberOfPreviousOwners is https://schema.org/numberOfPreviousOwners
+
+The number of owners of the vehicle, including the current one.\n\nTypical unit code(s): C62
+*/
+type NumberOfPreviousOwners float64
 
 /*
 
@@ -1287,6 +1884,22 @@ type OrderNumber string
 
 /*
 
+TypicalCreditsPerTerm is https://schema.org/typicalCreditsPerTerm
+
+The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined by the institution.
+*/
+type TypicalCreditsPerTerm float64
+
+/*
+
+RequiredQuantity is https://schema.org/requiredQuantity
+
+The required quantity of the item(s).
+*/
+type RequiredQuantity float64
+
+/*
+
 ApplicationSubCategory is https://schema.org/applicationSubCategory
 
 Subcategory of the application, e.g. 'Arcade Game'.
@@ -1300,6 +1913,14 @@ TargetPlatform is https://schema.org/targetPlatform
 Type of app development: phone, Metro style, desktop, XBox, etc.
 */
 type TargetPlatform string
+
+/*
+
+ApplicationStartDate is https://schema.org/applicationStartDate
+
+The date at which the program begins collecting applications for the next enrollment cycle.
+*/
+type ApplicationStartDate string
 
 /*
 
@@ -1351,11 +1972,43 @@ type AudienceType string
 
 /*
 
+RepeatCount is https://schema.org/repeatCount
+
+Defines the number of times a recurring [[Event]] will take place
+*/
+type RepeatCount float64
+
+/*
+
+DepartureTime is https://schema.org/departureTime
+
+The expected departure time.
+*/
+type DepartureTime string
+
+/*
+
+SdDatePublished is https://schema.org/sdDatePublished
+
+Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]]
+*/
+type SdDatePublished string
+
+/*
+
 StructuralClass is https://schema.org/structuralClass
 
 The name given to how bone physically connects to each other.
 */
 type StructuralClass string
+
+/*
+
+InterestRate is https://schema.org/interestRate
+
+The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.
+*/
+type InterestRate float64
 
 /*
 
@@ -1416,6 +2069,14 @@ type LinkRelationship string
 
 /*
 
+EndDate is https://schema.org/endDate
+
+The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+*/
+type EndDate string
+
+/*
+
 TravelBans is https://schema.org/travelBans
 
 Information about travel bans, e.g. in the context of a pandemic.
@@ -1461,6 +2122,14 @@ ProductID is https://schema.org/productID
 The product identifier, such as ISBN. For example: ``` meta itemprop="productID" content="isbn:123-456-789" ```.
 */
 type ProductID string
+
+/*
+
+CvdNumICUBeds is https://schema.org/cvdNumICUBeds
+
+numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds.
+*/
+type CvdNumICUBeds float64
 
 /*
 
@@ -1522,6 +2191,14 @@ type DosageForm string
 
 /*
 
+BirthDate is https://schema.org/birthDate
+
+Date of birth.
+*/
+type BirthDate string
+
+/*
+
 ProgramName is https://schema.org/programName
 
 The program providing the membership.
@@ -1562,6 +2239,14 @@ type BroadcastTimezone string
 
 /*
 
+CoverageStartTime is https://schema.org/coverageStartTime
+
+The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.
+*/
+type CoverageStartTime string
+
+/*
+
 LabelDetails is https://schema.org/labelDetails
 
 Link to the drug's label details.
@@ -1583,6 +2268,14 @@ CssSelector is https://schema.org/cssSelector
 A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
 */
 type CssSelector string
+
+/*
+
+NumberOfEpisodes is https://schema.org/numberOfEpisodes
+
+The number of episodes in this season or series.
+*/
+type NumberOfEpisodes float64
 
 /*
 
@@ -1644,11 +2337,27 @@ type UsageInfo string
 
 /*
 
+ExchangeRateSpread is https://schema.org/exchangeRateSpread
+
+The difference between the price at which a broker or other intermediary buys and sells foreign currency.
+*/
+type ExchangeRateSpread float64
+
+/*
+
 LegalName is https://schema.org/legalName
 
 The official name of the organization, e.g. the registered company name.
 */
 type LegalName string
+
+/*
+
+UserInteractionCount is https://schema.org/userInteractionCount
+
+The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
+*/
+type UserInteractionCount float64
 
 /*
 
@@ -1757,11 +2466,43 @@ type RecipeCuisine string
 
 /*
 
+PaymentDueDate is https://schema.org/paymentDueDate
+
+The date that payment is due.
+*/
+type PaymentDueDate string
+
+/*
+
 InChIKey is https://schema.org/inChIKey
 
 InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
 */
 type InChIKey string
+
+/*
+
+ReviewCount is https://schema.org/reviewCount
+
+The count of total number of reviews.
+*/
+type ReviewCount float64
+
+/*
+
+Free is https://schema.org/free
+
+A flag to signal that the item, event, or place is accessible for free.
+*/
+type Free bool
+
+/*
+
+JobStartDate is https://schema.org/jobStartDate
+
+The date on which a successful applicant for this job would be expected to start work. Choose a specific date in the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.
+*/
+type JobStartDate string
 
 /*
 
@@ -1790,6 +2531,14 @@ type RepeatFrequency string
 
 /*
 
+CvdCollectionDate is https://schema.org/cvdCollectionDate
+
+collectiondate - Date for which patient counts are reported.
+*/
+type CvdCollectionDate string
+
+/*
+
 DiscountCode is https://schema.org/discountCode
 
 Code used to redeem a discount.
@@ -1803,6 +2552,14 @@ CorrectionsPolicy is https://schema.org/correctionsPolicy
 For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
 */
 type CorrectionsPolicy string
+
+/*
+
+MonthlyMinimumRepaymentAmount is https://schema.org/monthlyMinimumRepaymentAmount
+
+The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.
+*/
+type MonthlyMinimumRepaymentAmount float64
 
 /*
 
@@ -1854,6 +2611,22 @@ type DrugUnit string
 
 /*
 
+ValueRequired is https://schema.org/valueRequired
+
+Whether the property must be filled in to complete the action.  Default is false.
+*/
+type ValueRequired bool
+
+/*
+
+CutoffTime is https://schema.org/cutoffTime
+
+Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day. For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
+*/
+type CutoffTime string
+
+/*
+
 TrackingUrl is https://schema.org/trackingUrl
 
 Tracking url for the parcel delivery.
@@ -1870,11 +2643,35 @@ type EducationalCredentialAwarded string
 
 /*
 
+ArtEdition is https://schema.org/artEdition
+
+The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
+*/
+type ArtEdition float64
+
+/*
+
 ArrivalTerminal is https://schema.org/arrivalTerminal
 
 Identifier of the flight's arrival terminal.
 */
 type ArrivalTerminal string
+
+/*
+
+YearBuilt is https://schema.org/yearBuilt
+
+The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
+*/
+type YearBuilt float64
+
+/*
+
+DateDeleted is https://schema.org/dateDeleted
+
+The datetime the item was removed from the DataFeed.
+*/
+type DateDeleted string
 
 /*
 
@@ -1894,11 +2691,43 @@ type MeasurementTechnique string
 
 /*
 
+CommentCount is https://schema.org/commentCount
+
+The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.
+*/
+type CommentCount float64
+
+/*
+
 CostCurrency is https://schema.org/costCurrency
 
 The currency (in 3-letter of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
 */
 type CostCurrency string
+
+/*
+
+RequiresSubscription is https://schema.org/requiresSubscription
+
+Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').
+*/
+type RequiresSubscription bool
+
+/*
+
+CvdNumC19HOPats is https://schema.org/cvdNumC19HOPats
+
+numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.
+*/
+type CvdNumC19HOPats float64
+
+/*
+
+StageAsNumber is https://schema.org/stageAsNumber
+
+The stage represented as a number, e.g. 3.
+*/
+type StageAsNumber float64
 
 /*
 
@@ -1942,6 +2771,14 @@ type FoodWarning string
 
 /*
 
+AmountOfThisGood is https://schema.org/amountOfThisGood
+
+The quantity of the goods included in the offer.
+*/
+type AmountOfThisGood float64
+
+/*
+
 LowPrice is https://schema.org/lowPrice
 
 The lowest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
@@ -1958,11 +2795,27 @@ type EmploymentType string
 
 /*
 
+MinValue is https://schema.org/minValue
+
+The lower value of some characteristic or property.
+*/
+type MinValue float64
+
+/*
+
 SpecialCommitments is https://schema.org/specialCommitments
 
 Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.
 */
 type SpecialCommitments string
+
+/*
+
+BillingIncrement is https://schema.org/billingIncrement
+
+This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.
+*/
+type BillingIncrement float64
 
 /*
 
@@ -2046,12 +2899,36 @@ type PostalCodePrefix string
 
 /*
 
+DatasetTimeInterval is https://schema.org/datasetTimeInterval
+
+The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
+*/
+type DatasetTimeInterval string
+
+/*
+
+CopyrightYear is https://schema.org/copyrightYear
+
+The year during which the claimed copyright for the CreativeWork was first asserted.
+*/
+type CopyrightYear float64
+
+/*
+
 Bed is https://schema.org/bed
 
 The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.
       If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
 */
 type Bed string
+
+/*
+
+DropoffTime is https://schema.org/dropoffTime
+
+When a rental car can be dropped off.
+*/
+type DropoffTime string
 
 /*
 
@@ -2087,6 +2964,14 @@ type Warning string
 
 /*
 
+PickupTime is https://schema.org/pickupTime
+
+When a taxi will pickup a passenger or a rental car can be picked up.
+*/
+type PickupTime string
+
+/*
+
 IsBasedOn is https://schema.org/isBasedOn
 
 A resource from which this work is derived or from which it is a modification or adaption.
@@ -2119,6 +3004,14 @@ type ClipNumber string
 
 /*
 
+Percentile10 is https://schema.org/percentile10
+
+The 10th percentile value.
+*/
+type Percentile10 float64
+
+/*
+
 Map is https://schema.org/map
 
 A URL to a map of the place.
@@ -2135,11 +3028,35 @@ type SampleType string
 
 /*
 
+NumberOfCredits is https://schema.org/numberOfCredits
+
+The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+*/
+type NumberOfCredits float64
+
+/*
+
+DownvoteCount is https://schema.org/downvoteCount
+
+The number of downvotes this question, answer or comment has received from the community.
+*/
+type DownvoteCount float64
+
+/*
+
 CookingMethod is https://schema.org/cookingMethod
 
 The method of cooking, such as Frying, Steaming, ...
 */
 type CookingMethod string
+
+/*
+
+ExpectedArrivalUntil is https://schema.org/expectedArrivalUntil
+
+The latest date the package may arrive.
+*/
+type ExpectedArrivalUntil string
 
 /*
 
@@ -2194,6 +3111,14 @@ type Image string
 
 /*
 
+OrderQuantity is https://schema.org/orderQuantity
+
+The number of the item ordered. If the property is not set, assume the quantity is one.
+*/
+type OrderQuantity float64
+
+/*
+
 DriveWheelConfiguration is https://schema.org/driveWheelConfiguration
 
 The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
@@ -2234,6 +3159,14 @@ type SeatSection string
 
 /*
 
+TotalJobOpenings is https://schema.org/totalJobOpenings
+
+The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions is unclear or not known.
+*/
+type TotalJobOpenings float64
+
+/*
+
 DiversityStaffingReport is https://schema.org/diversityStaffingReport
 
 For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.
@@ -2247,6 +3180,30 @@ CountryOfLastProcessing is https://schema.org/countryOfLastProcessing
 The place where the item (typically [[Product]]) was last processed and tested before importation.
 */
 type CountryOfLastProcessing string
+
+/*
+
+Percentile25 is https://schema.org/percentile25
+
+The 25th percentile value.
+*/
+type Percentile25 float64
+
+/*
+
+DateCreated is https://schema.org/dateCreated
+
+The date on which the CreativeWork was created or the item was added to a DataFeed.
+*/
+type DateCreated string
+
+/*
+
+AvailableThrough is https://schema.org/availableThrough
+
+After this date, the item will no longer be available for pickup.
+*/
+type AvailableThrough string
 
 /*
 
@@ -2282,6 +3239,14 @@ type PositiveNotes string
 
 /*
 
+BookingTime is https://schema.org/bookingTime
+
+The date and time the reservation was booked.
+*/
+type BookingTime string
+
+/*
+
 LegislationJurisdiction is https://schema.org/legislationJurisdiction
 
 The jurisdiction from which the legislation originates.
@@ -2314,11 +3279,27 @@ type AccommodationCategory string
 
 /*
 
+RequiredMaxAge is https://schema.org/requiredMaxAge
+
+Audiences defined by a person's maximum age.
+*/
+type RequiredMaxAge float64
+
+/*
+
 ReportNumber is https://schema.org/reportNumber
 
 The number or other unique designator assigned to a Report by the publishing organization.
 */
 type ReportNumber string
+
+/*
+
+DeathDate is https://schema.org/deathDate
+
+Date of death.
+*/
+type DeathDate string
 
 /*
 
@@ -2338,6 +3319,14 @@ type SeatRow string
 
 /*
 
+DomiciledMortgage is https://schema.org/domiciledMortgage
+
+Whether borrower is a resident of the jurisdiction where the property is located.
+*/
+type DomiciledMortgage bool
+
+/*
+
 RoleName is https://schema.org/roleName
 
 A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.
@@ -2346,11 +3335,35 @@ type RoleName string
 
 /*
 
+IsUnlabelledFallback is https://schema.org/isUnlabelledFallback
+
+This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
+*/
+type IsUnlabelledFallback bool
+
+/*
+
+LegislationDate is https://schema.org/legislationDate
+
+The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to be a legislation, even though it might not even be published or in force.
+*/
+type LegislationDate string
+
+/*
+
 HealthPlanDrugTier is https://schema.org/healthPlanDrugTier
 
 The tier(s) of drugs offered by this formulary or insurance plan.
 */
 type HealthPlanDrugTier string
+
+/*
+
+HealthPlanCostSharing is https://schema.org/healthPlanCostSharing
+
+Whether The costs to the patient for services under this network or formulary.
+*/
+type HealthPlanCostSharing bool
 
 /*
 
@@ -2370,11 +3383,27 @@ type PageEnd string
 
 /*
 
+ValidFrom is https://schema.org/validFrom
+
+The date when the item becomes valid.
+*/
+type ValidFrom string
+
+/*
+
 DeparturePlatform is https://schema.org/departurePlatform
 
 The platform from which the train departs.
 */
 type DeparturePlatform string
+
+/*
+
+LoanPaymentFrequency is https://schema.org/loanPaymentFrequency
+
+Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.
+*/
+type LoanPaymentFrequency float64
 
 /*
 
@@ -2410,6 +3439,14 @@ type PlayerType string
 
 /*
 
+Percentile90 is https://schema.org/percentile90
+
+The 90th percentile value.
+*/
+type Percentile90 float64
+
+/*
+
 DuringMedia is https://schema.org/duringMedia
 
 A media object representing the circumstances while performing this direction.
@@ -2434,11 +3471,27 @@ type ExperienceRequirements string
 
 /*
 
+PublicAccess is https://schema.org/publicAccess
+
+A flag to signal that the [[Place]] is open to public visitors.  If this property is omitted there is no assumed default boolean value
+*/
+type PublicAccess bool
+
+/*
+
 BroadcastChannelId is https://schema.org/broadcastChannelId
 
 The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
 */
 type BroadcastChannelId string
+
+/*
+
+NumberOfAxles is https://schema.org/numberOfAxles
+
+The number of axles.\n\nTypical unit code(s): C62
+*/
+type NumberOfAxles float64
 
 /*
 
@@ -2490,11 +3543,35 @@ type ApplicationSuite string
 
 /*
 
+DateSent is https://schema.org/dateSent
+
+The date/time at which the message was sent.
+*/
+type DateSent string
+
+/*
+
+AvailabilityEnds is https://schema.org/availabilityEnds
+
+The end of the availability of the product or service included in the offer.
+*/
+type AvailabilityEnds string
+
+/*
+
 CreditText is https://schema.org/creditText
 
 Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work.
 */
 type CreditText string
+
+/*
+
+ExpectedArrivalFrom is https://schema.org/expectedArrivalFrom
+
+The earliest date the package may arrive.
+*/
+type ExpectedArrivalFrom string
 
 /*
 
@@ -2511,6 +3588,14 @@ Sport is https://schema.org/sport
 A type of sport (e.g. Baseball).
 */
 type Sport string
+
+/*
+
+OwnedThrough is https://schema.org/ownedThrough
+
+The date and time of giving up ownership on the product.
+*/
+type OwnedThrough string
 
 /*
 
@@ -2575,6 +3660,22 @@ PrescribingInfo is https://schema.org/prescribingInfo
 Link to prescribing information for the drug.
 */
 type PrescribingInfo string
+
+/*
+
+RecourseLoan is https://schema.org/recourseLoan
+
+The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.
+*/
+type RecourseLoan bool
+
+/*
+
+ModelDate is https://schema.org/modelDate
+
+The release date of a vehicle model (often used to differentiate versions of the same make and model).
+*/
+type ModelDate string
 
 /*
 
@@ -2664,11 +3765,35 @@ type PaymentStatus string
 
 /*
 
+DateRead is https://schema.org/dateRead
+
+The date/time at which the message has been read by the recipient if a single recipient exists.
+*/
+type DateRead string
+
+/*
+
+NumberOfDoors is https://schema.org/numberOfDoors
+
+The number of doors.\n\nTypical unit code(s): C62
+*/
+type NumberOfDoors float64
+
+/*
+
 PublicTransportClosuresInfo is https://schema.org/publicTransportClosuresInfo
 
 Information about public transport closures.
 */
 type PublicTransportClosuresInfo string
+
+/*
+
+HasDriveThroughService is https://schema.org/hasDriveThroughService
+
+Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
+*/
+type HasDriveThroughService bool
 
 /*
 
@@ -2696,11 +3821,35 @@ type MissionCoveragePrioritiesPolicy string
 
 /*
 
+PlayersOnline is https://schema.org/playersOnline
+
+Number of players on the server.
+*/
+type PlayersOnline float64
+
+/*
+
 FunctionalClass is https://schema.org/functionalClass
 
 The degree of mobility the joint allows.
 */
 type FunctionalClass string
+
+/*
+
+WordCount is https://schema.org/wordCount
+
+The number of words in the text of the Article.
+*/
+type WordCount float64
+
+/*
+
+ExperienceInPlaceOfEducation is https://schema.org/experienceInPlaceOfEducation
+
+Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.
+*/
+type ExperienceInPlaceOfEducation bool
 
 /*
 
@@ -2744,6 +3893,14 @@ type Procedure string
 
 /*
 
+DateModified is https://schema.org/dateModified
+
+The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+*/
+type DateModified string
+
+/*
+
 HealthPlanId is https://schema.org/healthPlanId
 
 The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
@@ -2757,6 +3914,22 @@ PaymentMethodId is https://schema.org/paymentMethodId
 An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
 */
 type PaymentMethodId string
+
+/*
+
+CvdNumC19OFMechVentPats is https://schema.org/cvdNumC19OFMechVentPats
+
+numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.
+*/
+type CvdNumC19OFMechVentPats float64
+
+/*
+
+NumberOfPages is https://schema.org/numberOfPages
+
+The number of pages in the book.
+*/
+type NumberOfPages float64
 
 /*
 
@@ -2844,11 +4017,27 @@ type AddressLocality string
 
 /*
 
+MonthsOfExperience is https://schema.org/monthsOfExperience
+
+Indicates the minimal number of months of experience required for a position.
+*/
+type MonthsOfExperience float64
+
+/*
+
 AssociatedDisease is https://schema.org/associatedDisease
 
 Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.
 */
 type AssociatedDisease string
+
+/*
+
+CheckoutTime is https://schema.org/checkoutTime
+
+The latest someone may check out of a lodging establishment.
+*/
+type CheckoutTime string
 
 /*
 
@@ -2884,6 +4073,14 @@ type EducationRequirements string
 
 /*
 
+IssueNumber is https://schema.org/issueNumber
+
+Identifies the issue of publication; for example, "iii" or "2".
+*/
+type IssueNumber float64
+
+/*
+
 CvdFacilityId is https://schema.org/cvdFacilityId
 
 Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
@@ -2900,6 +4097,14 @@ type TrainNumber string
 
 /*
 
+CommentTime is https://schema.org/commentTime
+
+The time at which the UserComment was made.
+*/
+type CommentTime string
+
+/*
+
 EducationalProgramMode is https://schema.org/educationalProgramMode
 
 Similar to courseMode, The medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
@@ -2913,6 +4118,30 @@ Value is https://schema.org/value
 The value of the quantitative value or property value node.\n\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\n* For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
 */
 type Value string
+
+/*
+
+DateIssued is https://schema.org/dateIssued
+
+The date the ticket was issued.
+*/
+type DateIssued string
+
+/*
+
+IsProprietary is https://schema.org/isProprietary
+
+True if this item's name is a proprietary/brand name (vs. generic name).
+*/
+type IsProprietary bool
+
+/*
+
+ObservationDate is https://schema.org/observationDate
+
+The observationDate of an [[Observation]].
+*/
+type ObservationDate string
 
 /*
 
@@ -2940,6 +4169,14 @@ type AcquireLicensePage string
 
 /*
 
+VehicleSeatingCapacity is https://schema.org/vehicleSeatingCapacity
+
+The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
+*/
+type VehicleSeatingCapacity float64
+
+/*
+
 Transcript is https://schema.org/transcript
 
 If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
@@ -2964,11 +4201,27 @@ type ArrivalPlatform string
 
 /*
 
+MaxPrice is https://schema.org/maxPrice
+
+The highest price if the price is a range.
+*/
+type MaxPrice float64
+
+/*
+
 Naics is https://schema.org/naics
 
 The North American Industry Classification System (NAICS) code for a particular organization or business person.
 */
 type Naics string
+
+/*
+
+PreviousStartDate is https://schema.org/previousStartDate
+
+Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.
+*/
+type PreviousStartDate string
 
 /*
 
@@ -3020,6 +4273,14 @@ type Issn string
 
 /*
 
+IsAccessibleForFree is https://schema.org/isAccessibleForFree
+
+A flag to signal that the item, event, or place is accessible for free.
+*/
+type IsAccessibleForFree bool
+
+/*
+
 PaymentUrl is https://schema.org/paymentUrl
 
 The URL for sending a payment.
@@ -3060,11 +4321,27 @@ type Runtime string
 
 /*
 
+UploadDate is https://schema.org/uploadDate
+
+Date when this media object was uploaded to this site.
+*/
+type UploadDate string
+
+/*
+
 AdditionalType is https://schema.org/additionalType
 
 An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.
 */
 type AdditionalType string
+
+/*
+
+NumAdults is https://schema.org/numAdults
+
+The number of adults staying in the unit.
+*/
+type NumAdults float64
 
 /*
 
@@ -3084,6 +4361,22 @@ type SeatNumber string
 
 /*
 
+CvdNumVentUse is https://schema.org/cvdNumVentUse
+
+numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
+*/
+type CvdNumVentUse float64
+
+/*
+
+DatePublished is https://schema.org/datePublished
+
+Date of first broadcast/publication.
+*/
+type DatePublished string
+
+/*
+
 ProgrammingModel is https://schema.org/programmingModel
 
 Indicates whether API is managed or unmanaged.
@@ -3100,11 +4393,43 @@ type ProgramType string
 
 /*
 
+CvdNumBeds is https://schema.org/cvdNumBeds
+
+numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+*/
+type CvdNumBeds float64
+
+/*
+
 DoseUnit is https://schema.org/doseUnit
 
 The unit of the dose, e.g. 'mg'.
 */
 type DoseUnit string
+
+/*
+
+NumberOfBeds is https://schema.org/numberOfBeds
+
+The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
+*/
+type NumberOfBeds float64
+
+/*
+
+MerchantReturnDays is https://schema.org/merchantReturnDays
+
+Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
+*/
+type MerchantReturnDays string
+
+/*
+
+RemainingAttendeeCapacity is https://schema.org/remainingAttendeeCapacity
+
+The number of attendee places for an event that remain unallocated.
+*/
+type RemainingAttendeeCapacity float64
 
 /*
 
@@ -3164,11 +4489,27 @@ type ConditionsOfAccess string
 
 /*
 
+ByMonthDay is https://schema.org/byMonthDay
+
+Defines the day(s) of the month on which a recurring [[Event]] takes place. Specified as an [[Integer]] between 1-31.
+*/
+type ByMonthDay float64
+
+/*
+
 ValuePattern is https://schema.org/valuePattern
 
 Specifies a regular expression for testing literal values according to the HTML spec.
 */
 type ValuePattern string
+
+/*
+
+Opens is https://schema.org/opens
+
+The opening hour of the place or service on the given day(s) of the week.
+*/
+type Opens string
 
 /*
 
@@ -3201,6 +4542,14 @@ Model is https://schema.org/model
 The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.
 */
 type Model string
+
+/*
+
+DoseValue is https://schema.org/doseValue
+
+The value of the dose, e.g. 500.
+*/
+type DoseValue float64
 
 /*
 
@@ -3252,6 +4601,22 @@ type CommentText string
 
 /*
 
+CvdNumC19MechVentPats is https://schema.org/cvdNumC19MechVentPats
+
+numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.
+*/
+type CvdNumC19MechVentPats float64
+
+/*
+
+MaximumEnrollment is https://schema.org/maximumEnrollment
+
+The maximum number of students who may be enrolled in the program.
+*/
+type MaximumEnrollment float64
+
+/*
+
 AssemblyVersion is https://schema.org/assemblyVersion
 
 Associated product/technology version. e.g., .NET Framework 4.5.
@@ -3273,6 +4638,22 @@ ProductGroupID is https://schema.org/productGroupID
 Indicates a textual identifier for a ProductGroup.
 */
 type ProductGroupID string
+
+/*
+
+ChildMinAge is https://schema.org/childMinAge
+
+Minimal age of the child.
+*/
+type ChildMinAge float64
+
+/*
+
+NumberOfBedrooms is https://schema.org/numberOfBedrooms
+
+The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+*/
+type NumberOfBedrooms float64
 
 /*
 
@@ -3332,6 +4713,14 @@ type FinancialAidEligible string
 
 /*
 
+ReleaseDate is https://schema.org/releaseDate
+
+The release date of a product or product model. This can be used to distinguish the exact variant of a product.
+*/
+type ReleaseDate string
+
+/*
+
 MuscleAction is https://schema.org/muscleAction
 
 The movement the muscle generates.
@@ -3361,6 +4750,14 @@ AcceptsReservations is https://schema.org/acceptsReservations
 Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.
 */
 type AcceptsReservations string
+
+/*
+
+GuidelineDate is https://schema.org/guidelineDate
+
+Date on which this guideline's recommendation was made.
+*/
+type GuidelineDate string
 
 /*
 
@@ -3404,6 +4801,14 @@ type Gtin14 string
 
 /*
 
+EndTime is https://schema.org/endTime
+
+The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+*/
+type EndTime string
+
+/*
+
 DataFeedElement is https://schema.org/dataFeedElement
 
 An item within in a data feed. Data feeds may have many elements.
@@ -3429,11 +4834,27 @@ type BranchCode string
 
 /*
 
+NumberOfPartialBathrooms is https://schema.org/numberOfPartialBathrooms
+
+Number of partial bathrooms - The total number of half and ¼ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field). 
+*/
+type NumberOfPartialBathrooms float64
+
+/*
+
 PriceCurrency is https://schema.org/priceCurrency
 
 The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange Tradings Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types e.g. "Ithaca HOUR".
 */
 type PriceCurrency string
+
+/*
+
+VehicleModelDate is https://schema.org/vehicleModelDate
+
+The release date of a vehicle model (often used to differentiate versions of the same make and model).
+*/
+type VehicleModelDate string
 
 /*
 
@@ -3469,6 +4890,14 @@ type Size string
 
 /*
 
+Abridged is https://schema.org/abridged
+
+Indicates whether the book is an abridged edition.
+*/
+type Abridged bool
+
+/*
+
 VehicleConfiguration is https://schema.org/vehicleConfiguration
 
 A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.
@@ -3482,6 +4911,14 @@ Elevation is https://schema.org/elevation
 The elevation of a location ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters.
 */
 type Elevation string
+
+/*
+
+SuggestedMinAge is https://schema.org/suggestedMinAge
+
+Minimum recommended age in years for the audience or user.
+*/
+type SuggestedMinAge float64
 
 /*
 
@@ -3514,6 +4951,14 @@ DietFeatures is https://schema.org/dietFeatures
 Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
 */
 type DietFeatures string
+
+/*
+
+AnswerCount is https://schema.org/answerCount
+
+The number of answers this question has received.
+*/
+type AnswerCount float64
 
 /*
 
@@ -3589,6 +5034,23 @@ type IcaoCode string
 
 /*
 
+PaymentDue is https://schema.org/paymentDue
+
+The date that payment is due.
+*/
+type PaymentDue string
+
+/*
+
+Temporal is https://schema.org/temporal
+
+The "temporal" property can be used in cases where more specific properties
+(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.
+*/
+type Temporal string
+
+/*
+
 EduQuestionType is https://schema.org/eduQuestionType
 
 For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".
@@ -3610,6 +5072,14 @@ SchoolClosuresInfo is https://schema.org/schoolClosuresInfo
 Information about school closures.
 */
 type SchoolClosuresInfo string
+
+/*
+
+DoorTime is https://schema.org/doorTime
+
+The time admission will commence.
+*/
+type DoorTime string
 
 /*
 
@@ -3645,6 +5115,14 @@ type RestPeriods string
 
 /*
 
+StrengthValue is https://schema.org/strengthValue
+
+The value of an active ingredient's strength, e.g. 325.
+*/
+type StrengthValue float64
+
+/*
+
 License is https://schema.org/license
 
 A license document that applies to this content, typically indicated by URL.
@@ -3658,6 +5136,14 @@ LeiCode is https://schema.org/leiCode
 An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.
 */
 type LeiCode string
+
+/*
+
+BillingDuration is https://schema.org/billingDuration
+
+Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).
+*/
+type BillingDuration float64
 
 /*
 
@@ -3677,11 +5163,27 @@ type ExifData string
 
 /*
 
+ApplicationDeadline is https://schema.org/applicationDeadline
+
+The date at which the program stops collecting applications for the next enrollment cycle.
+*/
+type ApplicationDeadline string
+
+/*
+
 BroadcastSignalModulation is https://schema.org/broadcastSignalModulation
 
 The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
 */
 type BroadcastSignalModulation string
+
+/*
+
+BaseSalary is https://schema.org/baseSalary
+
+The base salary of the job or of an employee in an EmployeeRole.
+*/
+type BaseSalary float64
 
 /*
 
@@ -3709,6 +5211,22 @@ type ServiceType string
 
 /*
 
+DatePosted is https://schema.org/datePosted
+
+Publication date of an online listing.
+*/
+type DatePosted string
+
+/*
+
+ValueAddedTaxIncluded is https://schema.org/valueAddedTaxIncluded
+
+Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
+*/
+type ValueAddedTaxIncluded bool
+
+/*
+
 Skills is https://schema.org/skills
 
 A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill this role or to work in this occupation.
@@ -3717,11 +5235,27 @@ type Skills string
 
 /*
 
+ByMonth is https://schema.org/byMonth
+
+Defines the month(s) of the year on which a recurring [[Event]] takes place. Specified as an [[Integer]] between 1-12. January is 1.
+*/
+type ByMonth float64
+
+/*
+
 ArtMedium is https://schema.org/artMedium
 
 The material used. (e.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
 */
 type ArtMedium string
+
+/*
+
+StepValue is https://schema.org/stepValue
+
+The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+*/
+type StepValue float64
 
 /*
 
@@ -3746,6 +5280,22 @@ NoBylinesPolicy is https://schema.org/noBylinesPolicy
 For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.
 */
 type NoBylinesPolicy string
+
+/*
+
+FoundingDate is https://schema.org/foundingDate
+
+The date that this organization was founded.
+*/
+type FoundingDate string
+
+/*
+
+SeatingCapacity is https://schema.org/seatingCapacity
+
+The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons 
+*/
+type SeatingCapacity float64
 
 /*
 
@@ -3805,11 +5355,27 @@ type Tool string
 
 /*
 
+CollectionSize is https://schema.org/collectionSize
+
+The number of items in the [[Collection]].
+*/
+type CollectionSize float64
+
+/*
+
 HasMenu is https://schema.org/hasMenu
 
 Either the actual menu as a structured representation, as text, or a URL of the menu.
 */
 type HasMenu string
+
+/*
+
+CvdNumC19OverflowPats is https://schema.org/cvdNumC19OverflowPats
+
+numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.
+*/
+type CvdNumC19OverflowPats float64
 
 /*
 
@@ -3834,6 +5400,22 @@ MolecularWeight is https://schema.org/molecularWeight
 This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
 */
 type MolecularWeight string
+
+/*
+
+ContactlessPayment is https://schema.org/contactlessPayment
+
+A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
+*/
+type ContactlessPayment bool
+
+/*
+
+IsAvailableGenerically is https://schema.org/isAvailableGenerically
+
+True if the drug is available in a generic form (regardless of name).
+*/
+type IsAvailableGenerically bool
 
 /*
 
@@ -3866,6 +5448,22 @@ Colleague is https://schema.org/colleague
 A colleague of the person.
 */
 type Colleague string
+
+/*
+
+Amount is https://schema.org/amount
+
+The amount of money.
+*/
+type Amount float64
+
+/*
+
+OrderDate is https://schema.org/orderDate
+
+Date order was placed.
+*/
+type OrderDate string
 
 /*
 
@@ -3909,6 +5507,14 @@ type CodingSystem string
 
 /*
 
+IsFamilyFriendly is https://schema.org/isFamilyFriendly
+
+Indicates whether this content is family friendly.
+*/
+type IsFamilyFriendly bool
+
+/*
+
 Contraindication is https://schema.org/contraindication
 
 A contraindication for this therapy.
@@ -3933,11 +5539,27 @@ type GamePlatform string
 
 /*
 
+JobImmediateStart is https://schema.org/jobImmediateStart
+
+An indicator as to whether a position is available for an immediate start.
+*/
+type JobImmediateStart bool
+
+/*
+
 RelatedLink is https://schema.org/relatedLink
 
 A link related to this web page, for example to other related web pages.
 */
 type RelatedLink string
+
+/*
+
+NumberOfSeasons is https://schema.org/numberOfSeasons
+
+The number of seasons in this series.
+*/
+type NumberOfSeasons float64
 
 /*
 
@@ -3954,6 +5576,22 @@ VariablesMeasured is https://schema.org/variablesMeasured
 Originally named [[variablesMeasured]], The [[variableMeasured]] property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue.
 */
 type VariablesMeasured string
+
+/*
+
+ValidThrough is https://schema.org/validThrough
+
+The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
+*/
+type ValidThrough string
+
+/*
+
+NumberOfFullBathrooms is https://schema.org/numberOfFullBathrooms
+
+Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+*/
+type NumberOfFullBathrooms float64
 
 /*
 
@@ -3981,6 +5619,14 @@ type Documentation string
 
 /*
 
+MaximumPhysicalAttendeeCapacity is https://schema.org/maximumPhysicalAttendeeCapacity
+
+The maximum physical attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline aspects, in the case of a [[MixedEventAttendanceMode]]). 
+*/
+type MaximumPhysicalAttendeeCapacity float64
+
+/*
+
 SizeSystem is https://schema.org/sizeSystem
 
 The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
@@ -4002,6 +5648,14 @@ Menu is https://schema.org/menu
 Either the actual menu as a structured representation, as text, or a URL of the menu.
 */
 type Menu string
+
+/*
+
+AdditionalNumberOfGuests is https://schema.org/additionalNumberOfGuests
+
+If responding yes, the number of guests who will attend in addition to the invitee.
+*/
+type AdditionalNumberOfGuests float64
 
 /*
 
@@ -4054,6 +5708,14 @@ type AccessibilityAPI string
 
 /*
 
+IsGift is https://schema.org/isGift
+
+Was the offer accepted as a gift for someone other than the buyer.
+*/
+type IsGift bool
+
+/*
+
 PermittedUsage is https://schema.org/permittedUsage
 
 Indications regarding the permitted usage of the accommodation.
@@ -4099,6 +5761,15 @@ type Speakable string
 
 /*
 
+Price is https://schema.org/price
+
+The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange Tradings Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+      
+*/
+type Price float64
+
+/*
+
 MusicalKey is https://schema.org/musicalKey
 
 The key, mode, or scale this composition uses.
@@ -4120,6 +5791,22 @@ BodyType is https://schema.org/bodyType
 Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).
 */
 type BodyType string
+
+/*
+
+RatingValue is https://schema.org/ratingValue
+
+The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+*/
+type RatingValue float64
+
+/*
+
+CheckinTime is https://schema.org/checkinTime
+
+The earliest someone may check into a lodging establishment.
+*/
+type CheckinTime string
 
 /*
 
@@ -4179,6 +5866,38 @@ type PetsAllowed string
 
 /*
 
+Longitude is https://schema.org/longitude
+
+The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+*/
+type Longitude float64
+
+/*
+
+UpvoteCount is https://schema.org/upvoteCount
+
+The number of upvotes this question, answer or comment has received from the community.
+*/
+type UpvoteCount float64
+
+/*
+
+AvailabilityStarts is https://schema.org/availabilityStarts
+
+The beginning of the availability of the product or service included in the offer.
+*/
+type AvailabilityStarts string
+
+/*
+
+DateVehicleFirstRegistered is https://schema.org/dateVehicleFirstRegistered
+
+The date of the first registration of the vehicle with the respective public authorities.
+*/
+type DateVehicleFirstRegistered string
+
+/*
+
 Breadcrumb is https://schema.org/breadcrumb
 
 A set of links that can help a user understand and navigate a website hierarchy.
@@ -4216,6 +5935,14 @@ ApplicableCountry is https://schema.org/applicableCountry
 A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
 */
 type ApplicableCountry string
+
+/*
+
+CvdNumC19HospPats is https://schema.org/cvdNumC19HospPats
+
+numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
+*/
+type CvdNumC19HospPats float64
 
 /*
 
@@ -4267,6 +5994,30 @@ type Citation string
 
 /*
 
+VolumeNumber is https://schema.org/volumeNumber
+
+Identifies the volume of publication or multi-part work; for example, "iii" or "2".
+*/
+type VolumeNumber float64
+
+/*
+
+Version is https://schema.org/version
+
+The version of the CreativeWork embodied by a specified resource.
+*/
+type Version float64
+
+/*
+
+LegislationDateVersion is https://schema.org/legislationDateVersion
+
+The point-in-time at which the provided description of the legislation is valid (e.g. : when looking at the law on the 2016-04-07 (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")
+*/
+type LegislationDateVersion string
+
+/*
+
 SeasonNumber is https://schema.org/seasonNumber
 
 Position of the season within an ordered group of seasons.
@@ -4296,6 +6047,14 @@ QuarantineGuidelines is https://schema.org/quarantineGuidelines
 Guidelines about quarantine rules, e.g. in the context of a pandemic.
 */
 type QuarantineGuidelines string
+
+/*
+
+MultipleValues is https://schema.org/multipleValues
+
+Whether multiple values are allowed for the property.  Default is false.
+*/
+type MultipleValues bool
 
 /*
 
@@ -4371,6 +6130,22 @@ type Pagination string
 
 /*
 
+OfferCount is https://schema.org/offerCount
+
+The number of offers for the product.
+*/
+type OfferCount float64
+
+/*
+
+ByMonthWeek is https://schema.org/byMonthWeek
+
+Defines the week(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-5. For clarity, byMonthWeek is best used in conjunction with byDay to indicate concepts like the first and third Mondays of a month.
+*/
+type ByMonthWeek float64
+
+/*
+
 Aspect is https://schema.org/aspect
 
 An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
@@ -4392,6 +6167,14 @@ HowPerformed is https://schema.org/howPerformed
 How the procedure is performed.
 */
 type HowPerformed string
+
+/*
+
+NumChildren is https://schema.org/numChildren
+
+The number of children staying in the unit.
+*/
+type NumChildren float64
 
 /*
 
@@ -4424,6 +6207,14 @@ AvailableOnDevice is https://schema.org/availableOnDevice
 Device required to run the application. Used in cases where a specific make/model is required to run the application.
 */
 type AvailableOnDevice string
+
+/*
+
+RatingCount is https://schema.org/ratingCount
+
+The count of total number of ratings.
+*/
+type RatingCount float64
 
 /*
 
@@ -4504,6 +6295,14 @@ type SuggestedGender string
 
 /*
 
+BroadcastFrequencyValue is https://schema.org/broadcastFrequencyValue
+
+The frequency in MHz for a particular broadcast.
+*/
+type BroadcastFrequencyValue float64
+
+/*
+
 FaxNumber is https://schema.org/faxNumber
 
 The fax number.
@@ -4532,6 +6331,30 @@ type MealService string
 
 /*
 
+DownPayment is https://schema.org/downPayment
+
+a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.
+*/
+type DownPayment float64
+
+/*
+
+IsLiveBroadcast is https://schema.org/isLiveBroadcast
+
+True if the broadcast is of a live event.
+*/
+type IsLiveBroadcast bool
+
+/*
+
+AvailableFrom is https://schema.org/availableFrom
+
+When the item is available for pickup from the store, locker, etc.
+*/
+type AvailableFrom string
+
+/*
+
 ExerciseType is https://schema.org/exerciseType
 
 Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
@@ -4546,6 +6369,14 @@ The identifier property represents any kind of identifier for any kind of [[Thin
         
 */
 type Identifier string
+
+/*
+
+BillingStart is https://schema.org/billingStart
+
+Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
+*/
+type BillingStart float64
 
 /*
 
