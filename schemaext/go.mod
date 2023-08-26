@@ -1,4 +1,4 @@
-module github.com/fogfish/schemaorg/media
+module github.com/fogfish/schemaorg/schemaext
 
 go 1.20
 
