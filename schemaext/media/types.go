@@ -1,6 +1,17 @@
+//
+// Copyright (C) 2023 Dmitry Kolesnikov
+//
+// This file may be modified and distributed under the terms
+// of the MIT license.  See the LICENSE file for details.
+// https://github.com/fogfish/schemaorg
+//
+
 package media
 
 import "github.com/fogfish/schemaorg"
+
+// Media Type
+type Type string
 
 // Original resolution
 type Origin schemaorg.Url
