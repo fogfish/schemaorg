@@ -16,6 +16,9 @@ type Type string
 // Original resolution
 type Origin schemaorg.Url
 
+// Blur Hash image placeholder https://blurha.sh
+type Blur string
+
 // Half Quarter VGA (240 x 160), use for thumbnails
 type HQVGA schemaorg.Url
 

@@ -14,6 +14,7 @@ import (
 
 // Urls to media object
 type Urls struct {
+	Blur   Blur          `json:"blur,omitempty"`
 	HQVGA  HQVGA         `json:"hqvga,omitempty"`
 	WQVGA  WQVGA         `json:"wqvga,omitempty"`
 	SD     SD            `json:"sd,omitempty"`
