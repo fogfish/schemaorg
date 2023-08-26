@@ -27,7 +27,7 @@ jobs:
      
       - name: go build
         run: |
-          go build ./...
+          find . -name go.mod -execdir go build ./... \;
     
       # - name: go test
       #   run: |
