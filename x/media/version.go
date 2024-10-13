@@ -8,4 +8,4 @@
 
 package media
 
-const Vsn = "v0.4.0"
+const Vsn = "x/media/v0.4.0"
