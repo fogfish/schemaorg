@@ -1,0 +1,39 @@
+##
+## Build the main branch
+##
+name: build
+on:
+  push:
+    branches:
+      - main
+      - /refs/heads/main
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module: ["."]
+
+    steps:
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - uses: actions/checkout@v4
+
+      - name: go build
+        working-directory: ${{ matrix.module }}
+        run: |
+          go build ./...
+    
+      - name: release
+        working-directory: ${{ matrix.module }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          for mod in `grep -roh "const Vsn = \".*" * | grep -Eoh "([[:alnum:]]*/*){1,}v[0-9]*\.[0-9]*\.[0-9]*"`
+          do
+            git tag $mod 2> /dev/null && git push origin -u $mod 2> /dev/null && echo "[+] $mod" || echo "[ ] $mod"
+          done

@@ -79,6 +79,20 @@ The library is auto-generated from schema.org JSON-LD definition using [schemacl
 
 Use the following commands to re-generate the type definitions
 
+1. Install command-line
+
+```bash
+go install github.com/fogfish/schemacli@latest
+```
+
+2. Download the latest release of schema.org
+
+```bash
+curl -O https://raw.githubusercontent.com/schemaorg/schemaorg/refs/heads/main/data/releases/28.0/schemaorg-all-http.jsonld
+```
+
+3. Generate Golang types
+
 ```bash
 schemacli property -f schemaorg-all-http.jsonld > types.go
 ```
