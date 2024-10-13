@@ -8,7 +8,9 @@
 
 package media
 
-import "github.com/fogfish/schemaorg"
+import (
+	"github.com/fogfish/schemaorg"
+)
 
 // Media Type
 type Type string
